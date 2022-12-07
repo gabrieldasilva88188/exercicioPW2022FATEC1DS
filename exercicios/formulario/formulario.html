@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .div1{
+            background-color: rgb(189, 188, 188);
+            text-align: center;
+        }
+        .posi{
+            position: absolute;
+            left: 40%;
+            text-align: center;
+            align-self: center;
+            height: 1100px;
+            width: 200px;
+            border: 10px solid black;
+            border-radius: 20px;
+        }
+        .pos1{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+        }
+        .span-required{
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="div1">
+    <div class="posi">
+        <form name="" action="" method="" enctype="" class="form">
+        <div>
+
+            <label for="Nome">Nome: </label>
+            <input type="text" name="Nome" id="Nome" class="inputs required" value="" maxlength="" size="" oninput="nameValidate()" placeholder="Digite seu nome" required />
+            <span class="span-required">o nome deve ter no minimo 3 letras</span>
+        </div>  
+        <br>
+        <div>
+            <label for="Rua">Rua</label>
+            <input type="text" name="Rua" id="Rua" class="">
+        </div>
+        <br>
+        <div>
+            <label for="NumeroC">Numero da Casa</label>
+            <input type="number" name="NumeroC">
+        </div>
+        <br>
+
+        <div>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" class="inputs required" oninput="emailValidate()" />
+            <span class="span-required">coloque um email valido</span>
+
+        </div>
+        <br>
+
+        <div>
+            <label>Sexo: </label>
+            <input type="radio" name="sexo" id="s">
+            <label for="s" value="Mas">m</label>
+
+            <input type="radio" name="sexo" id="f">
+            <label for="f" value="Fem">f</label>
+        </div>
+        
+
+        <div>
+            <label for="">Revista de interesse</label>
+            <input type="checkbox" name="REV" value="php" />PHP
+            <input type="checkbox" name="REV" value="MYSQL" />MYSQL
+            <input type="checkbox" name="REV" value="HTML" />HTML
+            <input type="checkbox" name="REV" value="JS" />JS
+        </div>
+        <br>
+
+        <div>
+            <select name="uf" id="uf">
+                <option value="">Selecione</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="bairro">Bairro</label>
+            <input type="text" name="bairro" id="bairro" placeholder="Vila guilherme">
+        </div>
+
+        <div>
+            <label for="cidade">Cidade</label>
+            <input type="text" name="cidade" id="cidade" placeholder="votorantim">
+        </div>
+        <div>
+            <label for="cep">CEP</label>
+            <input type="text" name="cep" id="cep" >
+        </div>
+        <div>
+            Mensagem:
+            <textarea cols="15" rows="10" name="ms"></textarea>
+        </div>
+
+
+        <div>
+            <label for="Data">Data</label>
+            <input type="date" name="Data">
+        </div>
+        <div>
+            <label for="rg">RG</label>
+            <input type="number" name="rg" id="rg">
+        </div>
+        <div>
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf" >    
+            <button id="but" >clique para analisar o cpf</button>
+            
+        </div>
+
+        <div>
+            <label for="Numero">Numero De Telefone</label>
+            <input type="tel" name="Numero">
+        </div>
+        <div>
+            <label>Foto</label>
+            <input type="image">
+        </div>
+        <div>
+            <label for="log">Login</label>
+            <input type="text" name="log" id="log">
+        </div>
+        <div>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha">
+        </div>
+
+
+        <div>
+            <label>color</label>
+            <input type="color" name="color">
+        </div>
+
+
+        <div>
+            <label>uplood</label>
+            <input type="file" name="file">
+        </div>
+
+
+        <div>
+            <label>pesquisa</label>
+            <input type="search" name="pesquisa">
+        </div>
+
+        <input type="submit" value="Cadastro" />
+        <input type="reset" value="limpar">
+        <input type="button" value="js">
+
+        </form>
+    </div>
+</body>
+
+</html>
+<script src="index2.js"></script>
+<script src="CPF.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+<script>
+    new Cleave('#cpf', {
+    delimiters: ['.','.','-'],
+    blocks: [3, 3, 3, 2],
+    numericOnly: true
+})
+</script>
